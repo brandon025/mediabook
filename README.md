@@ -23,11 +23,11 @@ If you want to run this app locally, make sure to have mongodb running
 and run it using node.
 
 How to run app locally on a MAC: 
-1) Edit index.js and comment out " mongoose.connect(process.env.MONGODB_URI); " without quotes.
-2) Then, uncomment " mongoose.connect("mongodb://localhost/meanapp"); ". This will allow you to run your database locally.
-3) If you haven't had mongoDB installed yet, follow these instructions https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/. If you have mongodb  on a mac or linux, use "sudo mangod" to start mongodb.
-4) Run node index.js
-5) Navigate to http://localhost:3000
+1) Edit index.js and comment out " mongoose.connect(process.env.MONGODB_URI); " without quotes.<br>
+2) Then, uncomment " mongoose.connect("mongodb://localhost/meanapp"); ". This will allow you to run your database locally.<br>
+3) If you haven't had mongoDB installed yet, follow these instructions https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/. If you have mongodb  on a mac or linux, use "sudo mangod" to start mongodb.<br>
+4) Run node index.js<br>
+5) Navigate to http://localhost:3000<br>
 
 <b>Dependencies</b>
 
