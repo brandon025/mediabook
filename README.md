@@ -1,24 +1,42 @@
 This website is built with MEAN stack.
 Mongodb, Expressjs, Angularjs, and Nodejs.
 
-This application includes a page where you can add as many videos
+-- About the Application --
+This application includes a page where you can add as many videos or images
 in a list and view them and the pages after are some random for 
 fun css and javascript graphic tests where you can interact with them.
-There is audio running in the background on one of them.
+There is audio running in the background on two of them.
 
+-- Links --
 You can run this application by going to this Heroku link:
-https://floating-fjord-65382.herokuapp.com/#/movies
-Github link:
-https://github.com/Ceciceciceci/meanapp
+https://afternoon-caverns-60170.herokuapp.com/
 
+Github Link: 
+https://github.com/brandon025/mediabook
+NOTE: Github does not show individual contributions! We worked on local machine and tested on our own github to avoid errors!
+
+-- How to run application --
 If you want to run this app locally, make sure to have mongodb running
 and run it using node.
 
+How to run app locally on a MAC: 
+1) Edit index.js and comment out " mongoose.connect(process.env.MONGODB_URI); " without quotes.
+2) Then, uncomment " mongoose.connect("mongodb://localhost/meanapp"); ". This will allow you to run your database locally.
+3) If you haven't had mongoDB installed yet, follow these instructions https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/. If you have mongodb  on a mac or linux, use "sudo mangod" to start mongodb.
+4) Run node index.js
+5) Navigate to http://localhost:3000
+
+-- Dependencies --
 All CSS and Javascript is pure. 
 Yeoman was used to make most of the template files, so that there
 wasn't too much focus on adding controllers and html pages.
 
-Brandon and Cecilia worked on making the application run on Heroku.
-Sassan used on the Heroku site to check usability.
-Github shows the contributions.
+Other dependencies including body-parser, clipboard, express, method-override, mongoose, node-restful, and resourcejs.
+
+-- Credits --
+-Brandon and Cecilia worked on making the MEAN STACK application run on Heroku.
+-Brandon developed "Home" and "Images" page. Also added "COPY" to the videos page. Also, combined individual work into one.
+-Cecilia developed "Videos" and Christmas graphics/audios.
+-Sassan worked on the "About US" page and attempted to get it working on AWS.
+
 
