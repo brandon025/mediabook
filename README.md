@@ -2,12 +2,14 @@ This website is built with MEAN stack.
 Mongodb, Expressjs, Angularjs, and Nodejs.
 
 -- About the Application --
+
 This application includes a page where you can add as many videos or images
 in a list and view them and the pages after are some random for 
 fun css and javascript graphic tests where you can interact with them.
 There is audio running in the background on two of them.
 
 -- Links --
+
 You can run this application by going to this Heroku link:
 https://afternoon-caverns-60170.herokuapp.com/
 
@@ -16,6 +18,7 @@ https://github.com/brandon025/mediabook
 NOTE: Github does not show individual contributions! We worked on local machine and tested on our own github to avoid errors!
 
 -- How to run application --
+
 If you want to run this app locally, make sure to have mongodb running
 and run it using node.
 
@@ -27,6 +30,7 @@ How to run app locally on a MAC:
 5) Navigate to http://localhost:3000
 
 -- Dependencies --
+
 All CSS and Javascript is pure. 
 Yeoman was used to make most of the template files, so that there
 wasn't too much focus on adding controllers and html pages.
@@ -34,6 +38,7 @@ wasn't too much focus on adding controllers and html pages.
 Other dependencies including body-parser, clipboard, express, method-override, mongoose, node-restful, and resourcejs.
 
 -- Credits --
+
 -Brandon and Cecilia worked on making the MEAN STACK application run on Heroku.
 -Brandon developed "Home" and "Images" page. Also added "COPY" to the videos page. Also, combined individual work into one.
 -Cecilia developed "Videos" and Christmas graphics/audios.
