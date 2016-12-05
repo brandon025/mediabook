@@ -1,0 +1,149 @@
+
+<html>
+	<head>
+		<meta charset=utf-8>
+		<title>Random Deer</title>
+        <link rel="stylesheet" href="styles/deer.css">
+		<style>
+			body, html{
+              background-color: #ffffff;
+              height: 100%;
+              width: 100%;
+            }
+
+            .snowfall{
+                background-color: #161616;
+                height: 100%;
+                width: 100%;
+                z-index: 1000;
+            }
+
+		</style>
+	</head>
+	<body>
+        <b>CMPE 172 Contributors</b><br>
+        1) Brandon Trieu: Home and Images Page, in charge of Heroku and merging individual work into routes and database.<br>
+        2) Cecilia Tran: Movies Page, Graphics And Sound, setup the whole Mean Stack.<br>
+        3) Sassan Bahramirad: About us Page, Got application running on AWS<br><br>
+        
+        <b>Dependencies</b>
+    "body-parser": "^1.15.2",
+    "clipboard": "^1.5.15",
+    "express": "^4.14.0",
+    "method-override": "^2.3.7",
+    "mongoose": "^4.7.0",
+    "node-restful": "^0.1.17",
+    "resourcejs": "^1.5.1"<br><br>
+        
+        <audio id="audio">
+        <source src="whitechristmas.mp3"></source>
+        </audio>
+        <canvas id="snowfall" class="snowfall"></canvas>
+
+        <div class="reindeer">
+            <div class="head">
+                <div class="eye"></div>
+                <div class="eye"></div>
+            </div>
+            <div class="antlers"></div>
+            <div class="antlers2"></div>
+            <div class="ear"></div>
+            <div class="tail"></div>
+            <div class="nose"></div>
+            <div class="leg3"></div>
+            <div class="leg4"></div>
+            <div class="body"></div>
+            <div class="leg1"></div>
+            <div class="leg2"></div>
+        </div>
+
+        <!--for the snow-->
+        <script>
+            var audio = $("audio")[0];
+            audio.play();
+            window.addEventListener('load', function() {
+            var button = document.getElementById("pauseAudio");
+            button.addEventListener('click', function() {        
+                var player = document.getElementById("player");
+                    player.pause();
+                }, false);
+            }, false);
+       </script>
+        <script>
+			var canvas = document.getElementById('snowfall'),
+                ctx = canvas.getContext('2d'),
+                width = ctx.canvas.width = document.body.offsetWidth,
+                height = ctx.canvas.height = document.body.offsetHeight,
+                animFrame = window.requestAnimationFrame ||
+                            window.mozRequestAnimationFrame ||
+                            window.webkitRequestAnimationFrame ||
+                            window.msRequestAnimationFrame,
+                snowflakes = [];
+
+            window.onresize = function() {
+                width = ctx.canvas.width = document.body.offsetWidth,
+                height = ctx.canvas.height = document.body.offsetHeight;
+            }
+
+            function update() {
+              for (var i = 0; i < snowflakes.length; i++) {
+                snowflakes[i].update();
+              }
+            }
+
+            function Snow() {
+              this.x = random(0, width);
+              this.y = random(-height, 0);
+              this.radius = random(0.5, 3.0);
+              this.speed = random(1, 2);
+              this.wind = random(-0.5, 1.0);
+            }
+
+            Snow.prototype.draw = function() {
+              ctx.beginPath();
+              ctx.arc(this.x, this.y, this.radius, 0, 2 * Math.PI);
+              ctx.fillStyle = '#fff';
+              ctx.fill();
+              ctx.closePath();
+            }
+
+            Snow.prototype.update = function() {
+              this.y += this.speed;
+              this.x += this.wind;
+
+              if (this.y > ctx.canvas.height) {
+                this.y = 0;
+                this.x = random(0, width);
+              }
+            }
+
+            function createSnow(count) {
+              for (var i = 0; i < count; i++) {
+                snowflakes[i] = new Snow();
+              }
+            }
+
+            function draw() {
+              ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+              for (var i = 0; i < snowflakes.length; i++) {
+                snowflakes[i].draw();
+              }
+            }
+
+            function loop() {
+              draw();
+              update();
+              animFrame(loop);
+            }
+
+            function random(min, max) {
+              var rand = (min + Math.random() * (max - min)).toFixed(1);
+              rand = Math.round(rand);
+              return rand;
+            }
+
+            createSnow(100);
+            loop();
+		</script>
+	</body>
+</html>

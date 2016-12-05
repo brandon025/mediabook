@@ -1,0 +1,39 @@
+
+<head>
+<b><font color="white">
+    <p>What is this site? <br></b></font>
+    <font color="gray">This site allows users to bookmark their favorite videos, images, or songs and view them right on the page! Any user may contribute to this page at the moment. Note that this web page was created for learning purposes only! More features coming soon! </font>
+    <font color="red">Hint: Hover over the egg to reveal something interesting!</font></p>
+    </head>
+
+<body>
+
+   
+         <link rel="stylesheet" href="styles/threeprac.css">
+    <script src="js/threeprac.js"></script>
+    <canvas id="sky"></canvas>
+    
+    <audio id="audio">
+        <source src="ukulele.mp3"></source>
+    </audio>
+    <div class="egg" id="egg">
+      <div class="chicky">
+        <div class="face">
+          <div class="eyes"></div>
+          <div class="mouth"></div>
+        </div>
+      </div>
+    </div>
+    
+        <script>
+        $( document ).ready(function() {
+            var audio = $("audio")[0];
+            $("#egg").hover(function() {
+              audio.play();
+            },function(){
+              audio.pause();
+            });
+            
+        });
+    </script>
+</body>

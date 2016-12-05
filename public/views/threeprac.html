@@ -1,0 +1,34 @@
+
+<head>
+    <link rel="stylesheet" href="styles/threeprac.css">
+    <script src="js/threeprac.js"></script>
+</head>
+
+<body>
+
+    <audio id="audio">
+        <source src="ukulele.mp3"></source>
+<!--        <source src="ukulele.mp3" type="audio/mpeg"></source>-->
+    </audio>
+
+    <div class="egg" id="egg">
+      <div class="chicky">
+        <div class="face">
+          <div class="eyes"></div>
+          <div class="mouth"></div>
+        </div>
+      </div>
+    </div>
+    <canvas id="sky"></canvas>
+        <script>
+        $( document ).ready(function() {
+            var audio = $("audio")[0];
+            $("#egg").hover(function() {
+              audio.play();
+            },function(){
+              audio.pause();
+            });
+            
+        });
+    </script>
+</body>

@@ -1,0 +1,130 @@
+body,html{
+
+    background: -webkit-linear-gradient(#00111e 39%, #033d5e);
+    background: -moz-linear-gradient(#00111e 30%, #033d5e);
+    background: -o-linear-gradient(#00111e 30%, #033d5e);
+    background: linear-gradient(#00111e 30%, #033d5e);
+    height:100%;
+    overflow: hidden;
+    width:100%;
+}
+
+#sky{
+    z-index:5;
+    overflow:hidden;
+    width:100%;
+}
+
+.egg {
+    position: fixed;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 250px;
+    background: #FFF;
+    /*Shape the egg*/
+    border-top-left-radius: 50% 60%;
+    border-top-right-radius: 50% 60%;
+    border-bottom-left-radius: 50% 40%;
+    border-bottom-right-radius: 50% 40%;
+/*    box-shadow: inset -10px -5px #EAEFDD;*/
+    transform-origin: 0 50%;
+    z-index: 1000;
+}
+
+.egg:hover{
+    animation: wobble 8s linear infinite;
+}
+
+.egg .chicky {
+    position: absolute;
+    bottom: 20px;
+    left: 50%; /*center the chicky*/
+    transform: translate(-50%, 0%);
+    width: 130px;
+    height: 130px;
+    background: #FFDF50;
+    border-radius: 100%;
+}
+
+.egg .chicky .face .eyes {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    display: flex;
+}
+
+.egg .chicky .face .eyes:before,
+.egg .chicky .face .eyes:after {
+    display: block;
+    content: '';
+    width: 25px;
+    height: 12px;
+    background: #884E2C;
+    border-radius: 100%;
+    animation: blink 4s infinite ease-in;
+    margin: 0 30px;
+}
+
+.egg .chicky .face .mouth {
+    position: absolute;
+    top: 75px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 40px;
+    height: 20px;
+    background: #ea6a00;
+    border-radius: 90px 90px 80px 80px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.egg .chicky .face .mouth:after {
+    display: block;
+    content: '';
+    width: 40px;
+    height: 9px;
+    background: #C75320;
+    border-radius: 1px 1px 90px 90px;
+}
+
+
+/**Define keyframes**/
+@keyframes blink {
+  0% {
+    height: 25px;
+  }
+  90% {
+    height: 25px;
+  }
+  92.5% {
+    height: 15px;
+  }
+  95% {
+    height: 10px;
+  }
+  97.5% {
+    height: 5px;
+  }
+  100% {
+    height: 5px;
+  }
+}
+
+@keyframes wobble {
+  0% {
+    transform: rotate(0deg) translate(-50%, -50%);
+  }
+  25% {
+    transform: rotate(35.52399602deg) translate(-50%, -50%);
+  }
+  75% {
+    transform: rotate(-41.79295204deg) translate(-50%, -50%);
+  }
+  100% {
+    transform: rotate(0deg) translate(-50%, -50%);
+  }
+}

@@ -1,0 +1,45 @@
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/copy.js"></script>
+<style>
+
+</style>
+
+<a class="btn btn-warning" href="/#/create/movie"><span class="glyphicon glyphicon-plus"></span> Add Video</a>
+<br>
+<table class="table table-striped">
+  <thead>
+    <tr><th>Title</th>
+    <th>URL</th>
+    <th>Copy/Edit/Delete</th>
+  </tr></thead>
+  <tbody>
+      
+    <tr ng-repeat="movie in movies">
+    
+      <td class="col-md-4 col-xs-4"><a class="col-xs-12" ng-href="/#/movie/{{ movie._id }}">{{ movie.title }}</a></td>
+      <td class="col-md-4 col-xs-4">{{ movie.url }}</td>
+      <td class="col-md-4 col-xs-4">
+        <div class="button-group">
+             <!-- Create clipboard button here -->
+           
+            <button class="btn" data-clipboard-text="{{ movie.url }}">Copy</button>
+            
+            <!-- Instantiate clipboards -->
+            <script>
+            var clipboard = new Clipboard('.btn');
+            </script>
+            
+          <a ng-href="/#/movie/{{ movie._id }}/edit" class="btn btn-success col-xs-0">edit
+            
+          </a>
+            
+            
+          <a ng-href="/#/movie/{{ movie._id }}/delete" class="btn btn-danger col-xs-0">delete
+          
+          </a>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
