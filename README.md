@@ -14,7 +14,7 @@ You can run this application by going to this Heroku link:
 https://afternoon-caverns-60170.herokuapp.com/
 
 Github Link: 
-https://github.com/brandon025/mediabook
+https://github.com/brandon025/mediabook <br>
 NOTE: Github does not show individual contributions! We worked on local machine and tested on our own github to avoid errors!
 
 <b> How to run application</b>
