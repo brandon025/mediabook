@@ -23,6 +23,6 @@ angular.module('clientApp')
       };
       $scope.back = function() {
           //goes back to the movie you were on
-        $location.path('/image/' + $routeParams.id);
+        $location.path('/images');
       };
     });
