@@ -37,7 +37,7 @@ wasn't too much focus on adding controllers and html pages.
 
 Other dependencies including body-parser, clipboard, express, method-override, mongoose, node-restful, and resourcejs.
 
-<b>-Credits</b>
+<b>Credits</b>
 -Brandon and Cecilia worked on making the MEAN STACK application run on Heroku. <br>
 -Brandon developed "Home" and "Images" page. Also added "COPY" to the videos page. Also, combined individual work into one. <br>
 -Cecilia developed "Videos" and Christmas graphics/audios.<br>
