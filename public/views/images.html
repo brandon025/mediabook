@@ -1,54 +1,60 @@
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="js/copy.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="js/copy.js"></script>
 <style>
-.darkred{
-     color: darkgray;
-}
+    .darkred{
+        color: darkgray;
+    }
     
+    .darkred:hover {
+        color: orange;
+    }
+
     span.glyphicon{
         font-size: 1.3em;
     }
+
+    .img{
+      padding:15px;    
+    }
     
-div.img {
-    margin: 5px;
-    border: 1px solid #ccc;
-    float: left;
-    width: 180px;
-  
-    
-}
+    div.img {
+        margin: 5px;
+        border: 1px solid #ccc;
+        float: left;
+        width: 30%;
+    }
 
-div.img:hover {
-    border: 1px solid #777;
-}
+    div.img:hover {
+        border: 1px solid #777;
+    }
 
-div.img img {
-    width: 100%;
-    height: auto;
-}
+    div.img img {
+        width: 100%;
+        height: 150px;
+    }
 
-div.desc {
-    padding: 15px;
-    text-align: center;
-}
+    div.desc {
+        padding: 15px;
+        text-align: center;
+    }
 </style>
 
 <a class="btn btn-warning" href="/#/create/image"><span class="glyphicon glyphicon-plus"></span> Add Image</a>
 <br><br>
 
 <div class="img" ng-repeat="image in images">
-<a href="{{ image.url }}"><img src="{{ image.url }}"></a>
+    <a href="{{ image.url }}"><img src="{{ image.url }}"></a>
     <div class="desc"><b>{{image.title}}</b></div>
-              <a ng-href="/#/image/{{ image._id }}/edit">
-                  <span class="glyphicon glyphicon-edit darkred"></span>
-          </a>
-            
-            
-          <a ng-href="/#/image/{{ image._id }}/delete">
-              <span class="glyphicon glyphicon-trash darkred"></span>
-           
-          </a>
+    <center>
+        <a class="col-md-6 col-xs-6" ng-href="/#/image/{{ image._id }}/edit">
+        <span class="glyphicon glyphicon-edit darkred"></span>
+        </a>
+
+        <a class="col-md-6 col-xs-6" ng-href="/#/image/{{ image._id }}/delete">
+        <span class="glyphicon glyphicon-trash darkred"></span>
+        </a>
+    </center>
 </div>
 
 

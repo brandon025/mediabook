@@ -22,22 +22,16 @@
       <td class="col-md-4 col-xs-4">
         <div class="button-group">
              <!-- Create clipboard button here -->
-           
-            <button class="btn" data-clipboard-text="{{ movie.url }}">Copy</button>
-            
+            <button class="btn btn-warning col-md-4 col-md-12" data-clipboard-text="{{ movie.url }}">Copy</button>
+
             <!-- Instantiate clipboards -->
             <script>
             var clipboard = new Clipboard('.btn');
             </script>
-            
-          <a ng-href="/#/movie/{{ movie._id }}/edit" class="btn btn-success col-xs-0">edit
-            
-          </a>
-            
-            
-          <a ng-href="/#/movie/{{ movie._id }}/delete" class="btn btn-danger col-xs-0">delete
-          
-          </a>
+
+            <a ng-href="/#/movie/{{ movie._id }}/edit" class="btn btn-success col-md-4 col-xs-12">Edit</a>
+
+            <a ng-href="/#/movie/{{ movie._id }}/delete" class="btn btn-danger col-md-4 col-xs-12">Delete</a>
         </div>
       </td>
     </tr>
