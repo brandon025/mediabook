@@ -1,26 +1,18 @@
 This website is built with MEAN stack.
 Mongodb, Expressjs, Angularjs, and Nodejs.
+Brandon Trieu, Cecilia Tran, Sassan Bahrahmirad
 
 <b> About the Application </b>
-
 This application includes a page where you can add as many videos or images
 in a list and view them and the pages after are some random for 
 fun css and javascript graphic tests where you can interact with them.
 There is audio running in the background on two of them.
 
 <b> Links </b>
-
 You can run this application by going to this Heroku link:
 https://afternoon-caverns-60170.herokuapp.com/
 
-Github Link: 
-https://github.com/brandon025/mediabook <br>
-
-
-<b>NOTE</b>: Github does not show individual contributions! We worked on local machine and tested on our own github to avoid errors! Previous work are also reflected here: https://github.com/Ceciceciceci/meanapp
-
 <b> How to run application</b>
-
 If you want to run this app locally, make sure to have mongodb running
 and use the command node index.js.
 
@@ -36,12 +28,6 @@ Navigate to your EC2 instance link.
 <b>Dependencies</b> 
 Yeoman was used to install most of the template files.
 Dependencies include: body-parser, clipboard, express, method-override, mongoose, node-restful, and resourcejs.
-
-<b>Credits</b><br>
--Brandon and Cecilia worked on making the MEAN STACK application run on Heroku. <br>
--Brandon developed "Home" and "Images" page. Also added "COPY" to the videos page. Also, combined individual work into one. <br>
--Cecilia developed "Videos", fixed UI and the random pages.<br>
--Sassan worked on the "About Us" page and attempted to get it working on AWS.<br>
 
 
 
