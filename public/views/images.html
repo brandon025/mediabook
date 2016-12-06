@@ -43,7 +43,7 @@
 <a class="btn btn-warning" href="/#/create/image"><span class="glyphicon glyphicon-plus"></span> Add Image</a>
 <br><br>
 
-<div class="img" ng-repeat="image in images | limitTo:-50 | orderBy:'time':true">
+<div class="img" ng-repeat="image in images | limitTo:-100 | orderBy:'time':true">
     <a href="{{ image.url }}"><img src="{{ image.url }}"></a>
     <div class="desc"><b>{{image.title}}</b></div>
     <center>
