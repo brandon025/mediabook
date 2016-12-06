@@ -16,7 +16,7 @@ https://afternoon-caverns-60170.herokuapp.com/
 Github Link: 
 https://github.com/brandon025/mediabook <br>
 
-<b>NOTE</b>: Github does not show individual contributions! We worked on local machine and tested on our own github to avoid errors!
+<b>NOTE</b>: Github does not show individual contributions! We worked on local machine and tested on our own github to avoid errors! Previous work are also reflected here: https://github.com/Ceciceciceci/meanapp
 
 <b> How to run application</b>
 
