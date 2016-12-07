@@ -7,15 +7,16 @@
 
 <a class="btn btn-warning" href="/#/create/movie"><span class="glyphicon glyphicon-plus"></span> Add Video</a>
 <br>
+<br>
+<input class="col-md-12" style="padding:11px;" type="text" ng-model="search" placeholder="Search"/> 
 <table class="table table-striped">
   <thead>
     <tr><th>Title</th>
     <th>URL</th>
     <th>Copy/Edit/Delete</th>
   </tr></thead>
-  <tbody>
-      
-    <tr ng-repeat="movie in movies | limitTo:-100 | orderBy:'time':true">
+  <tbody> 
+    <tr ng-repeat="movie in movies | filter:search | limitTo:-100 | orderBy:'time':true">
     
       <td class="col-md-4 col-xs-4"><a class="col-xs-12" ng-href="/#/movie/{{ movie._id }}">{{ movie.title }}</a></td>
       <td class="col-md-4 col-xs-4">{{ movie.url }}</td>

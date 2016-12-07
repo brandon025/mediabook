@@ -19,5 +19,10 @@
 angular.module('clientApp')
   .controller('MoviesCtrl', function (
     $scope, Movie) {
-    $scope.movies = Movie.getList().$object;
+    $scope.search = '';
+    $scope.movies = Movie.getList().$object; //array of movies
+    
+    $scope.filterVideos = function(movie){
+        $scope.search = movie;
+    };
   });
