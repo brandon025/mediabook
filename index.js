@@ -29,8 +29,8 @@ app.get('/', function(req, res){
 
 // Connect to MongoDB
 mongoose.Promise = global.Promise;
-//mongoose.connect(process.env.MONGODB_URI);
- mongoose.connect("mongodb://localhost/meanapp");
+mongoose.connect(process.env.MONGODB_URI);
+// mongoose.connect("mongodb://localhost/meanapp");
 mongoose.connection.once('open', function() {
 
   // Load the models.
